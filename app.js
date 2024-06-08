@@ -54,6 +54,8 @@ app.get('/callback', async (req, res) => {
             // });
             // const redirectUri = `${REDIRECT_URI}?access_token=${access_token}`;
             // res.redirect(redirectUri);
+            const redirectUri = `http://cred-test.onrender.com/getAuth?access_token=${access_token}`;
+            res.redirect(redirectUri);
 
         } catch (error) {
             console.error('Error exchanging code for token:', error);
