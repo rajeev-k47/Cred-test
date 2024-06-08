@@ -41,7 +41,7 @@ app.get('/callback', async (req, res) => {
                 grant_type: 'authorization_code'
             });
 
-            const { access_token} = response.data;
+            const { access_token, refresh_token, expires_in } = response.data;
 // , refresh_token, expires_in 
             // Save the tokens securely (e.g., in a database)
             // For demonstration, we are just sending the tokens in the response
