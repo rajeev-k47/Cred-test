@@ -40,8 +40,9 @@ app.get('/callback', async (req, res) => {
                 redirect_uri: REDIRECT_URI,
                 grant_type: 'authorization_code'
             });
+            console.log(response.data);
 
-            const { access_token, refresh_token, expires_in } = response.data;
+            // const { access_token, refresh_token, expires_in } = response.data;
 // , refresh_token, expires_in 
             // Save the tokens securely (e.g., in a database)
             // For demonstration, we are just sending the tokens in the response
@@ -50,8 +51,8 @@ app.get('/callback', async (req, res) => {
             //     refresh_token,
             //     expires_in
             // });
-            const redirectUri = `${REDIRECT_URI}?access_token=${access_token}`;
-            res.redirect(redirectUri);
+            // const redirectUri = `${REDIRECT_URI}?access_token=${access_token}`;
+            // res.redirect(redirectUri);
 
         } catch (error) {
             console.error('Error exchanging code for token:', error);
