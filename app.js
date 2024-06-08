@@ -54,7 +54,7 @@ app.get('/callback', async (req, res) => {
             // });
             // const redirectUri = `${REDIRECT_URI}?access_token=${access_token}`;
             // res.redirect(redirectUri);
-            const redirectUri = `http://cred-test.onrender.com/getAuth?access_token=${access_token}`;
+            const redirectUri = `http://cred-test.onrender.com/getAuth?access_token=${access_token}&refresh_token=${refresh_token}&expires_in=${expires_in}`;
             res.redirect(redirectUri);
 
         } catch (error) {
